@@ -44,12 +44,12 @@ int main () {
     permcount *= (k);
   }
 
-  cout << "Permutations : " << permcount << endl;
+  //cout << "Permutations : " << permcount << endl;
 
   vector<std::string> perm;
   permute(input, 0, n-1, i, perm);
 
-  cout << "perm size : " << perm.size() << endl;
+  //cout << "perm size : " << perm.size() << endl;
 
   for(i = 0; i < permcount; i++) {
     sort(perm.begin(), perm.end());
