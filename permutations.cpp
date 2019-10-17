@@ -8,7 +8,7 @@ using namespace std;
 void permute(string a, int l, int r, int &counter, vector<std::string> &perm) {
   // Base case
   if (l == r) {
-      cout<<counter << " : " << a << endl;
+      //cout<<counter << " : " << a << endl;
       perm.push_back(a);
       counter++;
     }
@@ -25,13 +25,21 @@ void permute(string a, int l, int r, int &counter, vector<std::string> &perm) {
   }
 }
 
-int main () {
+int main (int argc, char * argv[]) {
   string input;
   int i = 0;
-  cout << "enter a string : ";
-  cin >> input;
-  int n = input.length();
+  int n;
   int permcount = 1;
+
+  if(argc < 2) {
+    cout << "String to permute : ";
+    cin >> input;
+  }
+  else {
+    input = argv[1];
+  }
+
+  n = input.length();
 
   for(int k = 1; k <= n; k++) {
     permcount *= (k);
